@@ -3,7 +3,7 @@ import express from 'express';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-import logger from './helpers/logger';
+import logger from './helpers/loggerHelper';
 import router from './routers/router';
 
 const app = express();
