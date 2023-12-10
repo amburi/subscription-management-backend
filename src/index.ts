@@ -3,13 +3,15 @@ import http from 'http';
 
 import router from './routers/router';
 
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
-
 const server = http.createServer(app);
+const port = process.env.PORT;
 
-server.listen(3000, () => {
-  console.log('Server running on http://localhost:3000/');
+server.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 app.use('/', router());
